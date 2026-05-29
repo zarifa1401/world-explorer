@@ -1,3 +1,10 @@
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./*"]
+//     }
+//   }
+// }
 {
   "compilerOptions": {
     "paths": {
