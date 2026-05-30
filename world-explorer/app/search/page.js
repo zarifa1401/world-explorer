@@ -1,19 +1,27 @@
-import CountrySearch from "@/components/CountrySearch";
+import CountrySearch from "../../components/CountrySearch";
 
-export default function SearchPage() {
+export default async function SearchPage() {
+  const res = await fetch(
+    "https://restcountries.com/v3.1/all",
+    {
+      cache: "force-cache",
+    }
+  );
+
+  const countries = await res.json();
+
   return (
-    <div>
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-black mb-4">
-          Search Countries
-        </h1>
+    <main className="max-w-7xl mx-auto px-6 py-12">
+      <h1 className="text-5xl font-bold mb-4">
+        Search Countries
+      </h1>
 
-        <p className="text-slate-500 text-lg">
-          Find countries instantly.
-        </p>
-      </div>
+      <p className="text-gray-600 dark:text-gray-300 mb-8">
+        Search, filter, and sort countries
+        around the world.
+      </p>
 
-      <CountrySearch />
-    </div>
+      <CountrySearch countries={countries} />
+    </main>
   );
 }

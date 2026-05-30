@@ -1,36 +1,111 @@
-import Hero from "@/components/Hero";
 import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="space-y-20">
-      <Hero />
+    <main>
 
-      <section className="grid md:grid-cols-3 gap-6">
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">200+ Countries</h2>
-          <p>Explore countries from every region of the world.</p>
+      <div className="flex justify-center gap-4 mt-8">
+
+  <Link
+    href="/countries"
+    className="bg-blue-600 text-white px-8 py-4 rounded-xl"
+  >
+    Explore Countries
+  </Link>
+
+  <Link
+    href="/search"
+    className="border border-blue-600 px-8 py-4 rounded-xl"
+  >
+    Search Countries
+  </Link>
+
+</div>
+
+      <section className="max-w-7xl mx-auto px-6 py-24">
+
+        <div className="text-center">
+
+          <h1 className="text-6xl font-bold mb-6">
+            🌍 World Explorer
+          </h1>
+
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+
+            Explore countries around the world and
+            learn about their flags, capitals,
+            populations, currencies,
+            languages, and cultures.
+
+          </p>
+
+          <Link
+            href="/countries"
+            className="inline-block mt-8 bg-blue-600 text-white px-8 py-4 rounded-xl hover:bg-blue-700 transition"
+          >
+            Explore Countries
+          </Link>
+
         </div>
 
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Real API Data</h2>
-          <p>Data is fetched from the REST Countries API.</p>
-        </div>
-
-        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">Modern UI</h2>
-          <p>Beautiful responsive design with dark mode support.</p>
-        </div>
       </section>
 
-      <div className="text-center">
-        <Link
-          href="/countries"
-          className="bg-violet-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-violet-700 transition"
-        >
-          Start Exploring
-        </Link>
-      </div>
-    </div>
+      {/* STATS */}
+
+      <section className="max-w-7xl mx-auto px-6 py-12">
+
+        <div className="grid md:grid-cols-4 gap-6">
+
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow">
+            <h3 className="text-3xl font-bold">
+              250+
+            </h3>
+            <p>Countries</p>
+          </div>
+
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow">
+            <h3 className="text-3xl font-bold">
+              5
+            </h3>
+            <p>Regions</p>
+          </div>
+
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow">
+            <h3 className="text-3xl font-bold">
+              100+
+            </h3>
+            <p>Languages</p>
+          </div>
+
+          <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow">
+            <h3 className="text-3xl font-bold">
+              24
+            </h3>
+            <p>Time Zones</p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* MAP PLACEHOLDER */}
+
+      <section className="max-w-7xl mx-auto px-6 py-16">
+
+        <h2 className="text-4xl font-bold text-center mb-10">
+          Interactive World Map
+        </h2>
+
+        <div className="bg-white dark:bg-slate-800 h-[500px] rounded-3xl shadow flex items-center justify-center">
+
+          <p className="text-2xl">
+            🌎 World Map Coming Soon
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 }

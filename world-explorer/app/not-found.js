@@ -2,21 +2,28 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[70vh] flex flex-col items-center justify-center text-center">
-      <h1 className="text-8xl font-black text-violet-600 mb-6">
+    <main className="min-h-screen flex flex-col items-center justify-center px-6">
+
+      <h1 className="text-8xl font-bold">
         404
       </h1>
 
-      <p className="text-2xl mb-8 dark:text-slate-300">
-        Page Not Found
+      <h2 className="text-3xl font-semibold mt-4">
+        Country Not Found
+      </h2>
+
+      <p className="text-gray-500 mt-3">
+        The country you are looking for
+        does not exist.
       </p>
 
       <Link
         href="/"
-        className="bg-violet-600 text-white px-8 py-4 rounded-2xl hover:bg-violet-700 transition"
+        className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-xl"
       >
-        Back Home
+        Go Home
       </Link>
-    </div>
+
+    </main>
   );
 }
